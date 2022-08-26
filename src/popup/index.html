@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./index.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+    </style>
+    <script type="text/javascript" src="./popup.js" defer></script>
+    <title>Starter</title>
+  </head>
+  <body>
+    <div class="main-box">
+      <!-- header Box -->
+      <div class="header margin-075">
+        <div class="header-text">
+          <div
+            id="Clipper-notion"
+            class="mainHeading heading1 text-black weight-800"
+          >
+            Notion Pro Clipper
+          </div>
+          <div class="subheading1 text-nightBlack weight-normal">
+            Powered by Prototion
+          </div>
+        </div>
+        <div class="header-icons">
+          <img role="div" src="assests/help.svg" id="userHelp" />
+
+          <img role="div" src="assests/avatar.svg" id="userProfile" />
+        </div>
+      </div>
+
+      <!-- divider -->
+      <div class="divider margin-075"></div>
+
+      <!-- auth box -->
+      <div id="auth">
+        <!-- asks user to login to prototion -->
+        <div id="prototion">
+          <img src="assests/login_prototion.png" class="align-img" />
+          <div class="header-text margin-075">
+            <div class="heading2 text-nightBlack weight-500">
+              Login to get started
+            </div>
+            <div
+              class="para1 text-nightBlack weight-normal"
+              style="margin-top: 4px"
+            >
+              To use this extension. You need an account in Prototion. If you
+              already have an account, Please login or create one here:
+            </div>
+          </div>
+          <button class="auth-button weight-600 para2 text-white">Login</button>
+        </div>
+
+        <!-- asks user to link their notion -->
+        <!-- <div id="notion">
+        <img src="assests/login_notion.png" class="align-img" />
+        <div class="header-text margin-075">
+          <div class="heading2 text-nightBlack weight-500">Link Notion Account</div>
+          <div class="para1 text-nightBlack weight-normal">We use your connected Notion account to save web content, links and screenshots.</div>
+        </div>
+        <button class="auth-button weight-600 para2 text-white">Link Notion Account</button>
+      </div> -->
+      </div>
+
+      <!-- main activity section 1.125 -->
+      <div id="main-section" class="main-section">
+        <!-- markdown actions -->
+        <div class="heading1 text-nightBlack weight-700 margin-x">
+          Save page to notion
+        </div>
+        <div class="markdown-actions">
+          <div class="some-button" id="save-url">
+            <img src="assests/url.svg" />
+            <div class="para1">URL</div>
+          </div>
+          <div class="some-button" id="fullpage-md">
+            <img src="assests/fullpage.svg" />
+            <div class="para1">Full page</div>
+          </div>
+          <div class="some-button" id="section-md">
+            <img src="assests/section.svg" />
+            <div class="para1">Section</div>
+          </div>
+        </div>
+
+        <!-- screenshot actions -->
+        <div class="heading1 text-nightBlack weight-700 margin-x">
+          Save screenshot
+        </div>
+        <div class="screenshot-actions">
+          <div id="snippet" class="some-button">
+            <img src="assests/snip.svg" />
+            <div class="para1">Snip</div>
+          </div>
+          <div id="visible-part" class="some-button">
+            <img src="assests/visible.svg" />
+            <div class="para1">Visible part</div>
+          </div>
+          <div id="fullpage" class="some-button">
+            <img src="assests/fullpage.svg" />
+            <div class="para1">Full page</div>
+          </div>
+        </div>
+
+        <!-- divider -->
+        <div class="divider"></div>
+
+        <!-- enable quick save -->
+        <div class="enable-actions">
+          <div class="para2 text-nightBlack weight-500 margin-x">
+            Enable quick save images
+          </div>
+          <input class="switch" type="checkbox" />
+        </div>
+      </div>
+
+      <!-- user account page -->
+      <div id="account-section" class="account-section" style="display: none">
+        <!-- settings  -->
+        <div
+          class="profileBack"
+          style="display: flex; align-items: center; cursor: pointer"
+        >
+          <div
+            class="flex-shrink-0 text-nightBlack margin-x"
+            style="flex-shrink: 0; margin-right: 4px; padding-top: 2px"
+          >
+            <svg
+              style="width: 16px; height: 16px"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"
+              />
+            </svg>
+          </div>
+          <div class="heading1 text-nightBlack weight-700 margin-x">
+            Settings
+          </div>
+        </div>
+        <div class="account-settings">
+          <div class="user-info">
+            <div class="para2 user-name text-black weight-700"></div>
+            <div class="para1 user-email text-nightBlack"></div>
+          </div>
+        </div>
+
+        <!-- connected accounts  -->
+        <div class="para2 text-nightBlack weight-700">Connected Accounts</div>
+        <div class="account-connected">
+          <div class="user-account">
+            <div class="para1 text-nightBlack">
+              Notion: <span class="user-name-notion weight-600"></span>
+            </div>
+            <div id="notion-logout-btn" class="tBtn margin-x">
+              Logout of Notion
+            </div>
+            <div id="prototion-logout-btn" class="tBtn">
+              Logout of Prototion
+            </div>
+          </div>
+        </div>
+
+        <!-- footer -->
+        <div class="footer">
+          <!-- divider -->
+          <div class="divider"></div>
+
+          <!-- need help  -->
+          <div class="footer-actions">
+            <div class="para2 text-nightBlack weight-800 margin-x">
+              Need help?
+            </div>
+            <a
+              href="https://prototion.com/notion-pro-clipper"
+              target="_blank"
+              class="guide-text"
+              >Read quick guide here</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

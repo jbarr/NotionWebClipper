@@ -1,0 +1,51 @@
+{
+   "background": {
+      "scripts": [ "./service-worker.js" ]
+   },
+   "browser_action": {
+      "default_popup": "./src/popup/index.html",
+      "default_title": "Notion Pro Clipper"
+   },
+   "content_scripts": [ {
+      "css": [ "./src/foreground/foreground_styles.css" ],
+      "js": [ "./src/foreground/saveUrl.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   }, {
+      "css": [ "./src/foreground/foreground_styles.css" ],
+      "js": [ "./src/foreground/saveSection.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   }, {
+      "css": [ "./src/foreground/foreground_styles.css" ],
+      "js": [ "./src/foreground/fullpageBookmark.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   }, {
+      "css": [ "./src/foreground/foreground_styles.css" ],
+      "js": [ "./src/foreground/screenshotFullpage.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   }, {
+      "css": [ "./src/foreground/foreground_styles.css" ],
+      "js": [ "./src/foreground/screenshotSnippet.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   }, {
+      "css": [ "./src/foreground/foreground_styles.css" ],
+      "js": [ "./src/foreground/screenshotVisible.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   }, {
+      "css": [ "./src/foreground/foreground_styles.css" ],
+      "js": [ "./src/foreground/saveImage.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "description": "Notion Pro Clipper lets you add webpages, emails, screenshots and images to your Notion workspace.",
+   "icons": {
+      "128": "./src/logo/favicon-128x128.png",
+      "16": "./src/logo/favicon-16x16.png",
+      "32": "./src/logo/favicon-32x32.png",
+      "48": "./src/logo/favicon-48x48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkO/qDECpHkpVnDKVdOXR+q29iUPWCivMSSiwL7SDY9CspIs/gIjxD5UhIj6Ev0tmUHuQLCNAkBSj8cJRmAyHvxuSYg6wWQlNXOB+QvQzVT9sRUuIm+DucXPyIQLXo5LAYnYVErHY00Dq41xJQiBc16oHRMc03YEjdGLVYSE5jYOPVX91U+YWPIFhzA1KP2wPnbnn4yyxV43SzWuLumwcT0t4bla5NCv1DUYKpBxgUIrYiXwuaxLMJqh0RZZVbRRpf68qCCaHqEjt+aCcrT5zRBZfKZcaWutcxVOr9fq5Mjw5adNgGxqiW9wY/9PcToj9SI6J0W3qPLJk7eKHuZ/peQIDAQAB",
+   "manifest_version": 2,
+   "name": "Notion Pro Clipper",
+   "permissions": [ "activeTab", "tabs", "storage", "cookies", "contextMenus", "*://*/*", "\u003Call_urls>" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.5.2"
+}
